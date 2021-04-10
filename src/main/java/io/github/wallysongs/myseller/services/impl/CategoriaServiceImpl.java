@@ -1,7 +1,6 @@
 package io.github.wallysongs.myseller.services.impl;
 
 import java.util.List;
-import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 
@@ -19,8 +18,7 @@ public class CategoriaServiceImpl implements CategoriaService {
     }
 
     public Categoria buscarPeloId(Long id) {
-        Optional<Categoria> categoria  = categoriaRepository.findById(id);
-        return categoria.orElse(null);
+        return categoriaRepository.findById(id).orElse(null);
     }
 
     public List<Categoria> buscarTodos() {
