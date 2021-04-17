@@ -4,9 +4,10 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import io.github.wallysongs.myseller.entities.Categoria;
+import io.github.wallysongs.myseller.domain.Categoria;
 import io.github.wallysongs.myseller.repositories.CategoriaRepository;
 import io.github.wallysongs.myseller.services.CategoriaService;
+import io.github.wallysongs.myseller.services.exceptions.ObjectNotFoundException;
 
 @Service
 public class CategoriaServiceImpl implements CategoriaService {
@@ -18,7 +19,9 @@ public class CategoriaServiceImpl implements CategoriaService {
     }
 
     public Categoria buscarPeloId(Long id) {
-        return categoriaRepository.findById(id).orElse(null);
+        return this.categoriaRepository.findById(id).orElseThrow(() -> {
+            throw new ObjectNotFoundException("Objeto não encontrado!");
+        });
     }
 
     public List<Categoria> buscarTodos() {

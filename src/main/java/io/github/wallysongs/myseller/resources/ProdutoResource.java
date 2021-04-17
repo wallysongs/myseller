@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import io.github.wallysongs.myseller.entities.Produto;
+import io.github.wallysongs.myseller.domain.Produto;
 import io.github.wallysongs.myseller.repositories.ProdutoRepository;
 
 @RestController

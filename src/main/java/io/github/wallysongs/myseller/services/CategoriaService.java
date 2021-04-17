@@ -2,7 +2,7 @@ package io.github.wallysongs.myseller.services;
 
 import java.util.List;
 
-import io.github.wallysongs.myseller.entities.Categoria;
+import io.github.wallysongs.myseller.domain.Categoria;
 
 public interface CategoriaService {
     

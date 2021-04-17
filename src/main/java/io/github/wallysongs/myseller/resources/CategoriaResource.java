@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import io.github.wallysongs.myseller.entities.Categoria;
+import io.github.wallysongs.myseller.domain.Categoria;
 import io.github.wallysongs.myseller.services.CategoriaService;
 
 @RestController
